@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <script>
+        //Numbers taking from the user
+        //variable of numbers are writen in camelcase
+        const firstNumber = prompt("Enter first Number");
+        const secondNumber = prompt("Enter second Number");
+
+        //created function for sum of the two numbers
+        function sum(firstNumber, secondNumber){
+            let totalSum = +firstNumber + +secondNumber ;
+            return totalSum;
+        }
+
+        //created function for minus
+        function minus(firstNumber, secondNumber){
+            let minus = +firstNumber - +secondNumber ;
+            return minus;
+        }
+
+        //created function for multiplication
+        function mult(firstNumber, secondNumber){
+            let multiplication = +firstNumber * +secondNumber ;
+            return multiplication;
+        }
+
+        //created function for division
+        function division(firstNumber, secondNumber){
+            let division= +firstNumber / +secondNumber ;
+            return division;
+        }
+
+        //taking a operator from the user
+        const operator = prompt("Select Operator");
+
+        //using switch operator we can select the operator and alert its result
+
+        switch(operator)
+        {
+            //first case for +(addition)
+            case "+":
+                alert(sum(firstNumber,secondNumber));
+                break;
+            //second case for -(minus)    
+            case "-" :
+                alert(minus(firstNumber,secondNumber));
+                break;
+            //third case for *(multiplication)    
+            case "*" :
+                alert(mult(firstNumber,secondNumber));
+                break;
+            //last 4th case for division(/)    
+            case "/":
+                alert(division(firstNumber,secondNumber));
+                break;
+            //default case if entered operator y user is not valid    
+            default:
+                alert("Enter the operator from the given list ->+,-,*,/")        ;
+                break;
+
+        }
+
+    </script>
+    
+</body>
+</html>
